@@ -70,9 +70,7 @@ export default function Navbar() {
 
       <div
         id='mobile-menu'
-        className={`border-t border-light-300 md:hidden ${
-          open ? "block" : "hidden"
-        }`}
+        className={`border-t border-light-300 md:hidden ${open ? "block" : "hidden"}`}
       >
         <ul className='space-y-2 px-4 py-3'>
           {NAV_LINKS.map((l) => (
