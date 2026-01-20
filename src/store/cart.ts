@@ -31,7 +31,7 @@ export const useCartStore = create<CartState>()(
         if (existingItem) {
           set({
             items: items.map((i) =>
-              i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+              i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
             ),
           });
         } else {
@@ -44,7 +44,7 @@ export const useCartStore = create<CartState>()(
         const newItems = get().items;
         const total = newItems.reduce(
           (sum, item) => sum + item.price * item.quantity,
-          0
+          0,
         );
         set({ total });
       },
@@ -52,7 +52,7 @@ export const useCartStore = create<CartState>()(
         const items = get().items.filter((item) => item.id !== id);
         const total = items.reduce(
           (sum, item) => sum + item.price * item.quantity,
-          0
+          0,
         );
         set({ items, total });
       },
@@ -63,11 +63,11 @@ export const useCartStore = create<CartState>()(
         }
 
         const items = get().items.map((item) =>
-          item.id === id ? { ...item, quantity } : item
+          item.id === id ? { ...item, quantity } : item,
         );
         const total = items.reduce(
           (sum, item) => sum + item.price * item.quantity,
-          0
+          0,
         );
         set({ items, total });
       },
@@ -77,6 +77,6 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: "cart-storage",
-    }
-  )
+    },
+  ),
 );
