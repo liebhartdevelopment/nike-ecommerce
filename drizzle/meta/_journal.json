@@ -8,6 +8,13 @@
       "when": 1768943335567,
       "tag": "0000_bright_newton_destine",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1769028706683,
+      "tag": "0001_vengeful_jocasta",
+      "breakpoints": true
     }
   ]
 }
