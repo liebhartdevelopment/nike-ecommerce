@@ -113,8 +113,8 @@ export function getStringParam(
   if (v === undefined) return undefined;
   return Array.isArray(v) ? (v[0] ? String(v[0]) : undefined) : String(v);
 }
-
 /* New helpers for products */
+
 export type NormalizedProductFilters = {
   search?: string;
   genderSlugs: string[];
