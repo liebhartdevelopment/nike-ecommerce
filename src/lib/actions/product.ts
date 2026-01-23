@@ -82,7 +82,6 @@ export async function getAllProducts(
   );
 
   const variantConds: SQL[] = [];
-
   if (hasSize) {
     variantConds.push(
       inArray(
@@ -94,7 +93,6 @@ export async function getAllProducts(
       ),
     );
   }
-
   if (hasColor) {
     variantConds.push(
       inArray(
@@ -106,7 +104,6 @@ export async function getAllProducts(
       ),
     );
   }
-
   if (hasPrice) {
     const priceBounds: SQL[] = [];
     if (filters.priceRanges.length) {
